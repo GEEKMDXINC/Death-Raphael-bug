@@ -22,7 +22,6 @@ const { default: XeonBotIncConnect, delay, PHONENUMBER_MCC, makeCacheableSignalK
 const NodeCache = require("node-cache")
 const Pino = require("pino")
 const readline = require("readline")
-const { parsePhoneNumber } = require("libphonenumber-js")
 const makeWASocket = require("@whiskeysockets/baileys").default
 
 const store = makeInMemoryStore({
