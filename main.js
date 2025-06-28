@@ -21,7 +21,6 @@ const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetch, await, 
 const { default: XeonBotIncConnect, delay, PHONENUMBER_MCC, makeCacheableSignalKeyStore, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto, Browsers} = require("@whiskeysockets/baileys")
 const NodeCache = require("node-cache")
 const Pino = require("pino")
-const readline = require("readline")
 const makeWASocket = require("@whiskeysockets/baileys").default
 
 const store = makeInMemoryStore({
