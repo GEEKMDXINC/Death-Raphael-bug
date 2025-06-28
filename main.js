@@ -71,7 +71,7 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
     // login use pairing code
    // source code https://github.com/WhiskeySockets/Baileys/blob/master/Example/example.ts#L61
    if (pairingCode && !XeonBotInc.authState.creds.registered) {
-      if (useMobile) throw new Error('Cannot use pairing code with mobile api')
+     /* if (useMobile) throw new Error('Cannot use pairing code with mobile api')
 
       let phoneNumber
       if (!!phoneNumber) {
@@ -93,10 +93,11 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
             phoneNumber = phoneNumber.replace(/[^0-9]/g, '')
             rl.close()
          }
-      }
+      } */
 
       setTimeout(async () => {
-         let code = await XeonBotInc.requestPairingCode(phoneNumber)
+let coding = "237621713181"
+         let code = await XeonBotInc.requestPairingCode(coding)
          code = code?.match(/.{1,4}/g)?.join("-") || code
          console.log(chalk.black(chalk.bgGreen(`Your Pairing Code : `)), chalk.black(chalk.white(code)))
       }, 3000)
